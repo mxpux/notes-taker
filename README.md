@@ -25,6 +25,7 @@
 > - [x] Node JS
 > - [x] HTML
 > - [x] CSS
+> - [x] Heroku
 
 
 ***

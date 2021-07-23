@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const uuid = require('./public/assets/uuid');
 const app = express();
-const port = process.env.PORT || 3016;
+const port = process.env.PORT || 3017;
 
 var notesData = fs.readFileSync(path.join(__dirname, "db/db.json"), "utf8");
 var notesJSON = JSON.parse(notesData.toString());

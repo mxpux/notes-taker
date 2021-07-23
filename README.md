@@ -13,8 +13,8 @@
 ***
 > **Notes Taker** 
 ***
-![Screenshot of Notes Taker)](https://i.imgur.com/qkJVxj1.png)
-![Screenshot of Notes Taker)](https://i.imgur.com/qkJVxj1.png)
+![Screenshot of Notes Taker)](https://i.imgur.com/YePvbnx.png)
+![Screenshot of Notes Taker)](https://i.imgur.com/rxOEk7Z.png)
 ***
 
 

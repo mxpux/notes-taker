@@ -29,15 +29,16 @@ app.post("/api/notes", function (req, res) {
     const newNote = req.body;
     newNote.id = uuid() ;
     notesJSON.push(newNote)
-
+    console.log(notesJSON);
+    
     fs.writeFile(path.join(__dirname, "db/db.json"), JSON.stringify(notesJSON), function (err) {
         if (err){ throw err; } 
         res.json(newNote);
+        
     });
 });
 
 app.delete("/api/notes/:id" , (request,response) =>{
-
     const noteId = request.params.id;
     let newEntryData = notesJSON.filter((note) => note.id != noteId);
     notesJSON = newEntryData;

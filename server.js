@@ -1,9 +1,9 @@
 const fs = require("fs")
 const express = require("express");
 const path = require("path");
-const uuid = require("uuid/v4");
+const uuid = require('./public/assets/uuid');
 const app = express();
-const port = process.env.PORT || 3008;
+const port = process.env.PORT || 3016;
 
 var notesData = fs.readFileSync(path.join(__dirname, "db/db.json"), "utf8");
 var notesJSON = JSON.parse(notesData.toString());
@@ -28,10 +28,7 @@ app.get("/api/notes", (req, res) => {
 app.post("/api/notes", function (req, res) {
     const newNote = req.body;
     newNote.id = uuid() ;
-    console.log(newNote);
-
     notesJSON.push(newNote)
-    console.log(notesJSON);
 
     fs.writeFile(path.join(__dirname, "db/db.json"), JSON.stringify(notesJSON), function (err) {
         if (err){ throw err; } 
@@ -39,6 +36,20 @@ app.post("/api/notes", function (req, res) {
     });
 });
 
+app.delete("/api/notes/:id" , (request,response) =>{
+
+    const noteId = request.params.id;
+    let newEntryData = notesJSON.filter((note) => note.id != noteId);
+    notesJSON = newEntryData;
+    fs.writeFile(path.join(__dirname, "db/db.json"), JSON.stringify(notesJSON), function (err) {
+        if (err) {
+        throw err;
+        }
+        console.log('Cleared entry!');
+        response.send(notesJSON);
+    })
+
+})
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })

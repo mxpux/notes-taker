@@ -1,9 +1,7 @@
-# 
-# 
+
 # **Notes**
 #### 
 
-***
 
 > **Easy way to take Notes** 
 > - Write and save notes
@@ -13,8 +11,8 @@
 ***
 > **Notes Taker** 
 ***
-![Screenshot of Notes Taker)](https://i.imgur.com/YePvbnx.png)
-![Screenshot of Notes Taker)](https://i.imgur.com/rxOEk7Z.png)
+![Screenshot of Notes Taker)](https://i.imgur.com/KlqpQdw.png)
+![Screenshot of Notes Taker)](https://i.imgur.com/L0Gpe9C.png)
 ***
 
 
